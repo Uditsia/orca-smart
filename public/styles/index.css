@@ -10,27 +10,44 @@ body {
 }
 
 
-
-img {
+.backgroundImg {
     display: inline-block;
     position: absolute;
-    top: 5px;
+    top: -10px;
     left: 90px;
     transform: scaleX(-1);
     z-index: 2;
 }
 
+.lockBack{
+    top: -20px;
+    left: 20px;
+}
+.mobileBack{
+    left: 70px;
+    top: -10px;
+}
 .inputLable {
     color: rgba(240, 240, 240, 1);
     font-size: smaller;
 }
-
+.prop1{
+    top:220px;
+    left: 290px;
+}
+.prop2{
+    top:140px;
+    left: 10px;
+}
+.prop3{
+    left: 180px;
+}
 .wave1 {
     position: absolute;
     left: -60px;
     top: -260px;
     border-radius: 20% 40% 10% 83%;
-    background-color: rgba(8, 24, 255, 0.445);
+    background-color: rgba(133, 140, 241, 0.445);
     width: 500px;
     height: 500px;
     /* transform: rotate(10deg); */

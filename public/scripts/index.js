@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
         let app = firebase.app();
         const epsigninBtn = document.querySelector('.epsignin');
         epsigninBtn.addEventListener('click', (e) => {
-
-            epsignin()
-            e.preventDefault();
+            window.location = "https://orca-smart.web.app/home";
+            // epsignin()
+            // e.preventDefault();
         });
         const epsignupBtn = document.querySelector('.epsignup');
         epsignupBtn.addEventListener('click', (e) => {

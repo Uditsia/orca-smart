@@ -4,9 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wilink</title>
+  <title>Orca Smart</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   <link href="styles/index.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="57x57" href="/public/resources/background/3.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/public/resources/background/3.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/public/resources/background/3.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/public/resources/background/3.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/public/resources/background/3.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/public/resources/background/3.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/public/resources/background/3.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/public/resources/background/3.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/resources/background/3.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translusent">
+  <link rel="manifest" href="../manifest.json">
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/7.10.0/firebase-app.js"></script>
   <!-- include only the Firebase features as you need -->
@@ -18,9 +30,23 @@
   <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
   <script defer src="scripts/index.js"></script>
+  <script></script>
   <script>
+    let deferredPrompt;
 
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js', { scope: '/' })
+          .then(registration => {
+            console.log('Service Worker is registered', registration);
+          })
+          .catch(err => {
+            console.error('Registration failed:', err);
+          });
+      });
+    }
   </script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
 </head>
 
 <body>
@@ -30,12 +56,20 @@
   <p id="load"></p>
   <div class="imgContain">
     <div class="wave1"></div>
-    <img src="resources/background/14.png" width="400px" height="400px" class="backgroundImg maleStanding">
+    <img src="resources/background/2 (1).png" width="300px" height="300px" class="backgroundImg mobileBack">
+    <img src="resources/background/3 (2).png" width="190px" height="190px" class="backgroundImg lockBack">
+    <img src="resources/background/1 (1).png" width="160px" height="160px" class="backgroundImg prop1">
+    <img src="resources/background/4.png" width="160px" height="160px" class="backgroundImg prop2">
+    <img src="resources/background/5 (2).png" width="160px" height="160px" class="backgroundImg prop3">
+
+
+
 
   </div>
   <div class="registration">
     <form action="javascript:void(0);" class="signinForm">
-      <label id="emailLable" class="inputLable" for="email">Email ID</label><br>
+      <label id="emailLable" class="inputLable" for="email" style="color: black;font-weight: bold;">Orca
+        Login</label><br>
       <input id="email" type="email" placeholder="Email" class="formInput" autocomplete="email" autofocus /><br>
       <label id="passwordLable" class="inputLable" for="pass">Password</label><br>
       <input id="pass" type="password" placeholder="Password" class="formInput" /><br>
@@ -59,9 +93,15 @@
     </form>
 
   </div>
-
   <script>
 
+    window.addEventListener('beforeinstallprompt', (event) => {
+      console.log('👍', 'beforeinstallprompt', event);
+      // Stash the event so it can be triggered later.
+      window.deferredPrompt = event;
+      // Remove the 'hidden' class from the install button container
+      divInstall.classList.toggle('hidden', false);
+    });
   </script>
 </body>
 

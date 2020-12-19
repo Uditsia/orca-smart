@@ -21,7 +21,7 @@ body {
 .fixedbtn {
     width: 33.33%;
     border: 0px;
-    background-color: rgb(31, 160, 73);
+    background-color: rgb(96, 96, 230);
 }
 
 .navicon {
@@ -33,18 +33,45 @@ body {
     height: 100%;
     overflow: scroll;
 }
+.lockIcon{
+    margin-top: 40%;
+}
 
 .switchcontainer {
-    margin-top: 10%;
+    margin-top: 20%;
     width: 90%;
-    height: 20em;
-    background-color: rgba(235, 235, 235, 1);
-    border: 4px rgba(240, 240, 240, 1);
-    border-radius: 5%;
-    box-shadow: 10px 10px 15px rgba(0, 0, 30, 0.2), -10px -10px 15px rgba(255, 255, 255, 0.9), inset 10px 1px 0px rgba(0, 0, 0, 0.0);
-    display: flex;
-    flex-direction: row;
+    height: 50em;
+    background-color: rgba(96, 96, 230, 0.493);
+    text-align: center;
+    border-radius: 999999999999999999999%;
+    box-shadow: 0 0 0px rgba(25, 179, 226, 0.829);
+    animation: pulse 2s infinite;
 }
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(216, 172, 15, 0.76);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 100px rgba(204,169,44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(44, 132, 204, 0.911);
+      box-shadow: 0 0 0 0 rgba(44, 132, 204, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 200px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 200px rgba(204,169,44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
 
 .dataConrtainer {
     height: 100%;
