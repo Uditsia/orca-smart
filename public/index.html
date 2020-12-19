@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wilink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link href="styles/index.css" rel="stylesheet">
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.10.0/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.10.0/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.10.0/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.10.0/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.10.0/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <script defer src="scripts/index.js"></script>
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <nav>
+
+  </nav>
+  <p id="load"></p>
+  <div class="imgContain">
+    <div class="wave1"></div>
+    <img src="resources/background/14.png" width="400px" height="400px" class="backgroundImg maleStanding">
+
+  </div>
+  <div class="registration">
+    <form action="javascript:void(0);" class="signinForm">
+      <label id="emailLable" class="inputLable" for="email">Email ID</label><br>
+      <input id="email" type="email" placeholder="Email" class="formInput" autocomplete="email" autofocus /><br>
+      <label id="passwordLable" class="inputLable" for="pass">Password</label><br>
+      <input id="pass" type="password" placeholder="Password" class="formInput" /><br>
+      <button class="epsignin wiButton">Sign in</button>
+      <button id="signin" class="wiButton googleBtn"
+        style="background-color: rgba(238, 76, 27, 0.808); color: white;">Google Sign In</button>
+      <button id="creatAcc" class="wiButton signupbtn">Create Account</button>
+    </form>
+
+    <form action="javascript:void(0);" class="signupForm signinForm">
+      <h5>Create Account</h5>
+      <label for="fullName" class="inputLable">Full Name</label><br>
+      <input type="text" id='fullName' class="formInput" placeholder="Full Name" aria-placeholder="Full Name"><br>
+      <label for="phNumber" class="inputLable">Phone Number</label><br>
+      <input type="tel" id='phNumber' class="formInput" aria-placeholder="Phone Number" placeholder="Phone Number"><br>
+      <label id="emailLable1" for="email1" class="inputLable">Email ID</label><br>
+      <input id="email1" type="email" class="formInput" placeholder="Email" /><br>
+      <label id="passwordLable1" for="pass1" class="inputLable">Password</label><br>
+      <input id="pass1" type="password" class="formInput" placeholder="Password" /><br>
+      <button class="epsignup wiButton">Sign up</button>
+    </form>
+
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

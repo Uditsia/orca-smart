@@ -1,0 +1,23 @@
+{
+  "name": "orca-smart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uditsia/orca-smart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Uditsia/orca-smart/issues"
+  },
+  "homepage": "https://github.com/Uditsia/orca-smart#readme",
+  "dependencies": {
+    "firebase": "^8.2.1",
+    "firebase-admin": "^9.4.2"
+  }
+}

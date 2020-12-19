@@ -1,0 +1,49 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <script defer src="/__/firebase/7.10.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.10.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.10.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.10.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.10.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script src="https://kit.fontawesome.com/35c1de7e70.js" crossorigin="anonymous"></script>
+    <link href="styles/home.css" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</head>
+
+<body>
+    <i id='load'></i><br>
+    <button class="signout">button to signout</button>
+    <div class="scrollContainer">
+        <div class="switchcontainer">
+            <div class="dataConrtainer">
+                <h4>Device Name</h4>
+            </div>
+            <div class="schedule scele">
+                <i class="far fa-clock fa-4x"></i><br>
+                <label >Schedule: None</label>
+            </div>
+            <div class="switch scele"><i class="fas fa-power-off fa-4x" id="dstate"></i><br><label for="dstate">ON</label></div>
+        </div>
+   
+
+    </div>
+    <footer>
+        <div class="fixedContainer">
+            <button class="fixedbtn"><i class="navicon fas fa-home fa-4x"></i></button>
+            <button class="fixedbtn"><i class="navicon fab fa-buromobelexperte fa-4x"></i></button>
+            <button class="fixedbtn"><i class="navicon fas fa-clock fa-4x"></i></button>
+        </div>
+    </footer>
+</body>
+<script src="scripts/home.js"></script>
+<script>
+  
+</script>
+
+</html>
