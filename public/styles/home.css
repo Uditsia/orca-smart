@@ -8,6 +8,9 @@ body {
     height: 100%;
     overflow: hidden;
 }
+input[type=range]{
+    width: 400px;
+}
 
 .fixedContainer {
     display: flex;
@@ -33,12 +36,67 @@ body {
     height: 100%;
     overflow: scroll;
 }
-.lockIcon{
-    margin-top: 40%;
+.lockIcon,.unlockIcon{
+    margin-top: 15%;
+}
+.batteryPer{
+    margin-top: 20%;
+    font-size: 34px;
+    font-weight: bolder;
 }
 
+.formInput {
+    font-weight: bold;
+    background-color: rgba(235, 235, 235, 1);
+    text-align: center;
+    font-size: medium;
+    border: 4px rgba(240, 240, 240, 1);
+    box-shadow: 10px 10px 15px rgba(0, 0, 30, 0.2), -10px -10px 15px rgba(255, 255, 255, 0.9), inset 10px 1px 0px rgba(0, 0, 0, 0.0);
+    width: 60%;
+    height: 5em;
+    border-radius: 999999px;
+    transform: scale(1);
+    transition: box-shadow 1s, transform 0.6s;
+    animation: shadowFadeIn 0.3s;
+}
+.alertContainer{
+    width: 80%;
+    display: flex;
+    overflow-y: scroll;
+    height: 100%;
+}
+.alertEle{
+    margin-top: 10%;
+    margin-left: 5%;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    box-shadow: 0px 0 20px rgba(0,0,0,0.4);
+
+}
+.wiButton {
+    margin-top: 5%;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    background-color: rgba(235, 235, 235, 1);
+    border: 4px rgba(240, 240, 240, 1);
+    border-radius: 5%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 30, 0.2), -10px -10px 15px rgba(255, 255, 255, 0.9), inset 10px 1px 0px rgba(0, 0, 0, 0.0);
+    width: 55%;
+    height: 4.5em;
+}
+.googleBtn {
+    width: 20%;
+    height: 3.5em;
+    box-shadow: 0px 0px 15px rgba(238, 76, 27, 0.808), inset 10px 1px 0px rgba(0, 0, 0, 0.0);
+
+}
+.mapView{
+    margin-top: 3%;
+}
 .switchcontainer {
-    margin-top: 20%;
+    margin-top: 40%;
     width: 90%;
     height: 50em;
     background-color: rgba(96, 96, 230, 0.493);
@@ -46,6 +104,7 @@ body {
     border-radius: 999999999999999999999%;
     box-shadow: 0 0 0px rgba(25, 179, 226, 0.829);
     animation: pulse 2s infinite;
+    overflow: hidden;
 }
 @-webkit-keyframes pulse {
     0% {

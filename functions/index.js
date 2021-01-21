@@ -25,16 +25,6 @@ app.set("view engine", "ejs");
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")))
     .set("views", path.join(__dirname, "../public/pages"))
-app.get('/adddevice', (req, res) => {
-
-    console.log("Receaved Device state req");
-
-
-    //console.log(`http Header:${req.header}`);
-    updateDeviceList();
-    res.send("ok");
-    // res.json({ state: state });
-});
 app.get('/home', (req, res) => {
     res.render(`home.ejs`)
 })

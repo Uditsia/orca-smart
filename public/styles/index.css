@@ -42,6 +42,7 @@ body {
 .prop3{
     left: 180px;
 }
+
 .wave1 {
     position: absolute;
     left: -60px;
@@ -68,6 +69,7 @@ body {
     color: rgba(50, 50, 50, 0.8);
     z-index: 3;
 }
+
 
 .wiButton {
     margin-top: 5%;

@@ -14,23 +14,91 @@
     <link href="styles/home.css" rel="stylesheet">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
 </head>
 
 <body>
     <i id='load'></i><br>
-    <button class="signout">button to signout</button>
+    <button class="signout wiButton googleBtn" style="background-color: rgba(238, 76, 27, 0.808); color: white;"
+        width="10%">Signout</button>
     <div class="scrollContainer">
         <div class="switchcontainer">
+            <p class="batteryPer">Battery:<span class="batteryPer">30%</span></p>
             <i class="fas fa-lock fa-9x lockIcon" style="color:white;"></i>
+            <i class="fas fa-lock-open fa-9x unlockIcon" style="color: white; display: none;"></i>
+            <div class="wave1"></div>
         </div>
-
+        <div class="geoLocation" style="display: none;">
+            <h2>GPS Traking</h2>
+            <input class="formInput mapInput" type="text" size="50"><br><br>
+            <input type="range" min="1" max="100" value="0" class="rangeP" width="400px">
+            <output>0</output><span>KM</span><br>
+            <button class="wiButton">Enforce</button>
+            <h3>Current Location</h3>
+            <div style="width: 100%" class="mapView"><iframe class="map" width="720" height="600" frameborder="0"
+                    scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://maps.google.com/maps?width=720&amp;height=400&amp;hl=en&amp;q=Ahmedabad&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                    href="https://www.maps.ie/route-planner.htm">Driving Route Planner</a>
+            </div>
+        </div>
+        <div class="alertContainer" style="display: none;font-size: 20px;">
+            <div class="alertEle">
+                <h3 style="color: orangered; text-shadow: 0 0 1px rgba(238, 76, 27, 0.408);">Theft Alert</h3>
+                <p>Date:19/12/2020</p>
+                <p>Time: 06:45 PM</p>
+                <p>Alert Location:<a href="www.google.com">View on map</a></p>
+            </div>
+            <div class="alertEle">
+                <h3 style="color: orangered; text-shadow: 0 0 1px rgba(238, 76, 27, 0.408);">Theft Alert</h3>
+                <p>Date:19/12/2020</p>
+                <p>Time: 04:35 PM</p>
+                <p>Alert Location:<a href="www.google.com">View on map</a></p>
+            </div>
+            <div class="alertEle">
+                <h3 style="color: orangered; text-shadow: 0 0 1px rgba(238, 76, 27, 0.408);">Theft Alert</h3>
+                <p>Date:16/12/2020</p>
+                <p>Time: 11:02 PM</p>
+                <p>Alert Location:<a href="www.google.com">View on map</a></p>
+            </div>
+            <div class="alertEle">
+                <h3 style="color: orangered; text-shadow: 0 0 1px rgba(238, 76, 27, 0.408);">Theft Alert</h3>
+                <p>Date:16/12/2020</p>
+                <p>Time: 10:55 PM</p>
+                <p>Alert Location:<a href="www.google.com">View on map</a></p>
+            </div>
+            <div class="alertEle">
+                <h3 style="color: orangered; text-shadow: 0 0 1px rgba(238, 76, 27, 0.408);">Theft Alert</h3>
+                <p>Date:16/12/2020</p>
+                <p>Time: 06:40 PM</p>
+                <p>Alert Location:<a href="www.google.com">View on map</a></p>
+            </div>
+            <div class="alertEle">
+                <h3 style="color: orangered; text-shadow: 0 0 1px rgba(238, 76, 27, 0.408);">Theft Alert</h3>
+                <p>Date:16/12/2020</p>
+                <p>Time: 04:00 PM</p>
+                <p>Alert Location:<a href="www.google.com">View on map</a></p>
+            </div>
+            <div class="alertEle">
+                <h3 style="color: orangered; text-shadow: 0 0 1px rgba(238, 76, 27, 0.408);">Theft Alert</h3>
+                <p>Date:14/12/2020</p>
+                <p>Time: 10:45 AM</p>
+                <p>Alert Location:<a href="www.google.com">View on map</a></p>
+            </div>
+            <div class="alertEle">
+                <h3 style="color: orangered; text-shadow: 0 0 1px rgba(238, 76, 27, 0.408);">Theft Alert</h3>
+                <p>Date:14/12/2020</p>
+                <p>Time: 09:33 AM</p>
+                <p>Alert Location:<a href="www.google.com">View on map</a></p>
+            </div>
+        </div>
 
     </div>
     <footer>
         <div class="fixedContainer">
             <button class="fixedbtn"><i class="navicon fas fa-home fa-4x"></i></button>
-            <button class="fixedbtn"><i class="navicon fab fa-buromobelexperte fa-4x"></i></button>
-            <button class="fixedbtn"><i class="navicon fas fa-globe fa-4x"></i></button>
+            <button class="fixedbtn alerts"><i class="navicon fab fa-buromobelexperte fa-4x"></i></button>
+            <button class="fixedbtn geo"><i class="navicon fas fa-globe fa-4x"></i></button>
         </div>
     </footer>
 </body>
